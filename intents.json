@@ -1,0 +1,150 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": ["Do you understand?","Understand"],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
+         "responses": ["Navigating to Adverse drug reaction module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
+         "responses": ["Navigating to Blood Pressure module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+         "responses": ["Please provide Patient ID", "Patient ID?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Loading Blood pressure result for Patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Loading pharmacy details"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Please provide hospital name or location"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Please provide hospital type"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Loading hospital details"],
+         "context": [""]
+        },
+        {"tag": "covid",
+         "patterns": ["Can pets catch the cold?"],
+         "responses": ["Yes they can. The viruses that cause a cold include rhinoviruses (up to 80%), coronaviruses and influenza (together accounting for much of the remaining 20%) and a small percentage of adenoviruses. When discussing cross species transfer, influenza is the most important to discuss as it is a fairly common cause of the common cold. Influenza A has humans, pigs, bird and horses as its host. Different influenza strains have different hosts. Influenza can recombine if two strains infect the same host (antigenic shift) and also mutate (antigenic drift). With a combination of these influenza can and has numerous times crossed the species barrier which has caused the major flu pandemics as well as swine and avian flu. It's this reservoir that makes these viruses so hard to eradicate. When we are the only host such as in polio virus, it is a lot easier. Pigs don't adhere to national flu guidelines. Comparing recovery times, all mammals are roughly similar although due to our slightly more evolved immune system as well as social factors of knowing what to do when we are ill we recovery very slightly earlier."],
+         "context": [""]
+        },
+        {"tag": "weather",
+         "patterns": ["What's the weather like today?","Is it going to rain?","Do I need to bring an umbrella?","How hot is it outside?", "What's the temperature?","What's the forecast for tomorrow?", "Can you tell me about the weather in New York?", "What's the humidity today?"
+        ],
+        "responses": [
+        "Today's weather is mostly cloudy with a chance of rain later in the day.",
+        "The forecast says there's a 50% chance of rain today.",
+        "It's a good idea to bring an umbrella just in case!",
+        "The current temperature is 70 degrees Fahrenheit.",
+        "It's a pleasant 72 degrees outside.",
+        "Tomorrow's forecast is for sunny skies and a high of 80 degrees.",
+        "New York is currently experiencing sunny weather with a high of 75 degrees.",
+        "The humidity is currently at 60%."
+        ],
+        "context": ["weather"]
+        },
+        {
+        "tag": "covid19",
+        "patterns": [
+        "What are the symptoms of COVID-19?",
+        "How is COVID-19 spread?",
+        "What should I do if I think I have COVID-19?",
+        "What's the latest news on COVID-19?",
+        "Can I get vaccinated for COVID-19?",
+        "Are there any travel restrictions due to COVID-19?",
+        "What are the long-term effects of COVID-19?",
+        "How can I protect myself from COVID-19?",
+        "What's the difference between COVID-19 and the flu?",
+        "Is it safe to go out in public with COVID-19 still a concern?"
+        ],
+        "responses": [
+        "Symptoms of COVID-19 can include fever, cough, and shortness of breath, among others.",
+        "COVID-19 is primarily spread through respiratory droplets when an infected person talks, coughs, or sneezes.",
+        "If you think you have COVID-19, you should self-isolate and contact your healthcare provider for advice.",
+        "The latest news on COVID-19 is that cases are continuing to rise in some areas and vaccination efforts are ongoing.",
+        "Yes, vaccines for COVID-19 are now widely available.",
+        "There may be travel restrictions in place due to COVID-19. Check with your local authorities for the latest information.",
+        "Some people who have had COVID-19 experience long-term effects such as fatigue and difficulty breathing.",
+        "Ways to protect yourself from COVID-19 include getting vaccinated, wearing a mask, and practicing good hand hygiene.",
+        "COVID-19 and the flu share some similarities, but COVID-19 can be more severe and has a higher risk of complications.",
+        "It's important to follow local health guidelines and make decisions based on your own risk level and comfort level."
+        ],
+        "context": ["covid19"]
+        },
+        {
+        "tag": "food",
+        "patterns": [
+        "What are some healthy meal options?",
+        "Can you recommend a good restaurant in the area?",
+        "What's the recipe for a classic Italian lasagna?",
+        "What are some popular food trends right now?",
+        "How can I eat a balanced diet?",
+        "What are some good vegetarian options?",
+        "What's the difference between a macchiato and a latte?",
+        "Can you suggest some easy dinner ideas?",
+        "What's your favorite type of cuisine?",
+        "What's the best way to meal prep for the week?"
+        ],
+        "responses": [
+        "Healthy meal options include plenty of fresh fruits and vegetables, lean proteins, and whole grains.",
+        "If you're looking for a good restaurant in the area, I would recommend checking out XYZ restaurant.",
+        "To make a classic Italian lasagna, you'll need ground beef, lasagna noodles, tomato sauce, and ricotta cheese, among other ingredients.",
+        "Some popular food trends right now include plant-based meats, fermented foods, and global flavors.",
+        "Eating a balanced diet involves consuming a variety of foods from all food groups in appropriate portions.",
+        "Some good vegetarian options include tofu stir-fry, lentil soup, and roasted vegetable sandwiches.",
+        "A macchiato is a shot of espresso with a small amount of milk foam on top, while a latte is espresso with steamed milk and a layer of foam on top.",
+        "Some easy dinner ideas include spaghetti and meatballs, grilled chicken with roasted vegetables, and baked salmon with lemon.",
+        "My favorite type of cuisine is Thai, I love the bold flavors and use of fresh ingredients.",
+        "Meal prepping for the week can involve preparing ingredients in advance, cooking large batches of food, and portioning out meals for easy reheating later."
+        ],
+        "context": ["food"]
+        }
+
+   ]
+}
